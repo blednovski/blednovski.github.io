@@ -181,19 +181,6 @@ body {
     }
   }
 
-  /* Тут бы сделать непрозрачную шапку */
-  /*
-  .header:target .menu__body:before {
-    content: "";f
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 80px;
-    width: 100%;
-    background-color: var(--color-bg-main);
-  }
-  */
-  
   .menu__list {
     flex-direction: column;
     justify-content: center;
@@ -224,7 +211,6 @@ body {
     height: 16px;
     flex-direction: column;
     justify-content: space-between;
-    /* margin: 0px 20px 0px 28px; */
   }
   .icon-menu::before,
   .icon-menu::after {
@@ -288,6 +274,12 @@ body {
 }
 .block-text__text:not(:last-child) {
   margin: 0px 0px 24px 0px;
+}
+
+@media (max-width: 991.98px) {
+  .block-text__title {
+    font-size: var(--font-size-desktop);
+  }
 }
 
 /* ----------------------------------------- */
@@ -400,8 +392,15 @@ body {
   .projects__project:not(:last-child) {
     margin: 0px 0px 20px 0px;
   }
-}
-@media (max-width: 767.98px) {
+  .project__link {
+    font-size: 20px;
+  }
+  .project__description {
+    font-size: 16px;
+  }
+  .project__list {
+    font-size: 16px;
+  }
 }
 
 /* ----------------------------------------- */
@@ -476,11 +475,6 @@ body {
 .contacts__link:hover {
   color: #999999;
   transition: 0.15s linear;
-}
-
-@media (max-width: 991.98px) {
-}
-@media (max-width: 767.98px) {
 }
 
 /* ----------------------------------------- */
